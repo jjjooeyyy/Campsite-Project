@@ -1,8 +1,8 @@
 const express = require('express');
-const app = express();
 const path = require('path');
 const mongoose = require('mongoose');
-const Campground = require('./models/campground')
+const Campground = require('./models/campground');
+const app = express();
 
 mongoose.connect('mongodb://127.0.0.1:27017/campsiteDB',{
     useNewUrlParser: true,
@@ -17,6 +17,7 @@ db.once("open", () => {
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'))
+
 
 app.use(express.urlencoded({ extended: true }));
 
