@@ -24,7 +24,6 @@ const seedDB = async() => {
             title: `${sample(descriptors)} ${sample(places)}`
         })
         await camp.save() 
-    
     }
 }
 
